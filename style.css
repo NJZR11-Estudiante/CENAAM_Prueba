@@ -1,0 +1,221 @@
+/* Estilo del boton de TikTok */
+.btn-tk {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 270px;
+    right: 30px;
+    background: black;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); */
+    z-index: 100;
+}
+
+/* Comportamiento del boton de TikTok con el cursor */
+.btn-tk:hover {
+    text-decoration: none;
+    background: #fff;
+    color: black;
+    transition: 0.3s;
+}
+
+/* Estilo del boton de Instragram */
+.btn-ig {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 210px;
+    right: 30px;
+    background: radial-gradient(circle at 33% 100%,
+            #fed373 4%,
+            #f15245 30%,
+            #d92e7f 62%,
+            #9b36b7 85%,
+            #515ecf 100%);
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); */
+    z-index: 100;
+}
+
+/* Comportamiento del boton de Instragram con el cursor */
+.btn-ig:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #d92e7f;
+    transition: 0.3s;
+}
+
+/* Estilo del boton de X-Twitter */
+.btn-tw {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    /* bottom: 210px; */
+    bottom: 150px;
+    right: 30px;
+    /* background: #1DA1F2;
+    color: #fff; */
+    background: black;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); */
+    z-index: 100;
+}
+
+/* Comportamiento del boton de X-Twitter con el cursor */
+.btn-tw:hover {
+    text-decoration: none;
+    /* background: #fff;
+    color: #1DA1F2; */
+    background: #fff;
+    color: black;
+    transition: 0.3s;
+}
+
+/* Estilo del boton de Facebook */
+.btn-fb {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 90px;
+    right: 30px;
+    background: #0000ff;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); */
+    z-index: 100;
+}
+
+/* Comportamiento del boton de Facebook con el cursor */
+.btn-fb:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #0000ff;
+    transition: 0.3s;
+}
+
+/* Estilo del boton de Whatsapp */
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); */
+    z-index: 100;
+}
+
+/* Comportamiento del boton de Whatsapp con el cursor */
+.btn-wsp:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #0df053;
+    transition: 0.3s;
+}
+
+/* Botonoes Izq prueba */
+
+.btn-fixed {
+    position: fixed;
+    z-index: 100;
+    left: 30px;
+    bottom: 270px;
+    background-color: black;
+}
+
+.Btn__TikTok {
+    bottom: 270px;
+}
+
+.Btn_Facebook {
+    bottom: 30px;
+    background: #3b5998;
+    color: #fff;
+}
+
+
+
+.custom-carousel {
+    width: 300px; /* Ancho personalizado */
+    height: 300px; /* Alto personalizado */
+    margin: 0 auto; /* Centrar el carrusel horizontalmente */
+}
+
+.custom-carousel-container {
+    max-width: 500px; /* Ajusta el ancho máximo del carrusel */
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+}
+
+.custom-carousel-container .carousel-inner img {
+    height: 500px; /* Ajusta la altura de las imágenes del carrusel */
+    object-fit: cover; /* Asegura que las imágenes cubran el área del carrusel */
+}
+
+.custom-hover:hover {
+    background-color: #2e3192; /* Cambia el color de fondo al pasar el cursor */
+    color: white; /* Cambia el color del texto al pasar el cursor */
+    border-color: white; /* Cambia el color del borde al pasar el cursor */
+}
+
+.btn-CD {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 25px;
+    padding: 14px 25px;
+    /* color: #2e3192; */
+    color: black ;
+    border: 1px solid black ;
+}
+
+/* Estilo del comportamiento de los botones de la seccion [Nosotros] con el cursor */
+.btn-CD:hover {
+    text-decoration: none;
+    background: #F5E98B ;
+    /* color: #fff; */
+    border: 1px solid black ;
+    transition: 0.3s;
+}
+
+.valor {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.footer {
+    background-color: #DBC67B  ;
+    /* background-color: orangered; */
+}
+/*
+.footer {
+    background: #373B44;
+    /* fallback for old browsers 
+    background: -webkit-linear-gradient(to left, #2c3293, #87d8eb);
+    /* Chrome 10-25, Safari 5.1-6 
+    background: linear-gradient(to left, #2c3293, #87d8eb);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+} */

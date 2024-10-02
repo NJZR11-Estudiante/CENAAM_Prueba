@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Nombre de la pagina en la pestaña del navegador-->
+    <title>CENAAM</title>
+
+    <!--Elemento grafico ubicado en la pestaña del navegador-->
+    <link rel="shortcut icon" href="Imagenes/Logo_CENAAM.png" type="image/png">
+
+    <!--Enlace con hoja CSS personalizada-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Script Instalacion de Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--Script Instalacion de iconos de Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!--Menu-->
+    <a name="Inicio"></a>
+    <nav class="navbar navbar-expand-md bg-body-tertiary ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img src="Imagenes/Logo_CENAAM.png" alt="Logo del CENAAM" width="40" height="50" alt=""> CENAAM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler" style="border: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal4">Institución</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Eventos">Eventos y Certificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Ubicacion">Ubicación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Menu Fijo-->
+    <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img src="Imagenes/Logo_CENAAM.png" alt="Logo del CENAAM" width="40" height="50" alt=""> CENAAM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler" style="border: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal4">Institución</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Eventos">Eventos y Certificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Ubicacion">Ubicación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Script JS para cerrar menu de manera automatica-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navbarToggler = document.getElementById('navbarToggler');
+            var navbarNav = document.getElementById('navbarNav');
+            var navLinks = navbarNav.querySelectorAll('.nav-link');
+    
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                        navbarToggler.click();
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!--Boton sobreposicionado-->
+    <!-- <a class="btn btn-primary btn-lg rounded-5 btn-fixed border-0" href="https://www.tiktok.com/@xbox?lang=es" role="button" target="_blank"
+    style="position: fixed; z-index: 100; left: 30px; bottom: 270px; border: none; background-color: black;">
+        <i class="bi bi-tiktok"></i>
+    </a>
+    <a class="btn btn-primary btn-lg rounded-5" href="https://www.instagram.com/Xboxmexico/" role="button" target="_blank"
+        style="position: fixed; z-index: 100; left: 30px; bottom: 210px; border: none; 
+        background: radial-gradient(circle at 33% 100%,
+        #fed373 4%,
+        #f15245 30%,
+        #d92e7f 62%,
+        #9b36b7 85%,
+        #515ecf 100%);">
+        <i class="bi bi-instagram"></i>
+    </a>
+    <a class="btn btn-primary btn-lg rounded-5" href="https://twitter.com/copame?lang=es" role="button" target="_blank"
+        style="position: fixed; z-index: 100; left: 30px; bottom: 150px; border: none; background-color: black;">
+        <i class="bi bi-twitter-x"></i>
+    </a>
+    <a class="btn btn-primary btn-lg rounded-5" href="https://www.facebook.com/colegiomexicanodeeducadoresfisicos/?locale=es_LA" role="button" target="_blank"
+        style="position: fixed; z-index: 100; left: 30px; bottom: 90px; border: none; background-color: #1977f2;">
+        <i class="bi bi-facebook"></i>
+    </a>
+    <a class="btn btn-primary btn-lg rounded-5" href="https://wa.me/message/YKM6WGU2KNCJB1" role="button" target="_blank"
+        style="position: fixed; z-index: 100; left: 30px; bottom: 30px; border: none; background-color: #26d367;">
+        <i class="bi bi-whatsapp"></i>
+    </a> -->
+
+    <!-- Boton de  tiktok en la esquina inferior derecha de la pagina -->
+    <a class="btn-tk d-flex align-items-center justify-content-center"
+        data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="bi bi-tiktok" style="font-size: 25px;"></i>
+    </a>
+    <!-- Boton de instagram en la esquina inferior derecha de la pagina -->
+    <a class="btn-ig d-flex align-items-center justify-content-center"
+        data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="bi bi-instagram" style="font-size: 25px;"></i>
+    </a>
+    <!-- Boton de twitter en la esquina inferior derecha de la pagina -->
+    <a class="btn-tw d-flex align-items-center justify-content-center"
+        data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="bi bi-twitter-x" style="font-size: 25px;"></i>
+    </a>
+    <!-- Boton de facebook en la esquina inferior derecha de la pagina -->
+    <a href="https://www.facebook.com/colegiomexicanodeeducadoresfisicos/?locale=es_LA" class="btn-fb d-flex align-items-center justify-content-center" target="_blank">
+        <i class="bi bi-facebook" style="font-size: 25px;"></i>
+    </a>
+    <!-- Boton de whatsapp en la esquina inferior derecha de la pagina -->
+    <a class="btn-wsp d-flex align-items-center justify-content-center" 
+        data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="bi bi-whatsapp" style="font-size: 25px;"></i>
+    </a>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Red social</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Enlaca tus redes sociales</h5>
+                    <ul>
+                        <li>TikTok</li>
+                        <li>Instragram</li>
+                        <li>X-Twitter</li>
+                    </ul>
+                    <li>Whatsapp: Informes o Soporte del Instituto</li>
+                    <li>Orden y elementos a seleccionar</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Contenedor principal, Nosotros-->
+    <main class="container mt-5 p-3"
+        style="background-image: url(Imagenes/Fondo_Garabato.png); border-radius: 25px;">
+        <div class="text-center">
+            <h1 class="text-center p-1">Nosotros</h1>
+            <p class="text-center p-2">
+                El Centro de Estudios Nacional de Artes Marciales es una Institución de carácter Educativo para la Capacitación
+                Continúa promoviendo la superación de monitores, instructores, p profesores y todas aquellas personas que deseen
+                profesionalizarse para mejorar en sus clases en las distintas disciplinas de Artes Marciales y con el apoyo,
+                colaboración y Aval del Colegio Nacional de Profesionistas en Entrenamiento Deportivo (CONAPRENDE) registrado en la
+                Dirección General de profesiones de la Secretaria de Educación Pública (SEP), el CENAM se protocoliza en el año con
+                el propósito de formar recurso humano capacitado con los elementos científicos y metodológicos que respondieran a
+                las necesidades del Arte Marcial en México.
+            </p>
+            <div class="text-center mb-3">
+                <!-- <a href="#" class="btn btn-lg custom-hover" 
+                    style="border-radius: 25px; background-color: white; border: 1px solid #2e3192; color: #2e3192;">
+                    Conoce a nuestro consejo directivo
+                </a> -->
+                <!-- class="btn-CD" href="#" target="_self" -->
+                <a class="btn-CD" data-bs-toggle="modal" data-bs-target="#exampleModal4">Conoce a nuestra institucion</a>
+            </div>
+        </div>
+    </main>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva pagina en desarrollo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Proximamente...</h5>
+                    <ul>
+                        <li>Fundadores y Equipo directivo</li>
+                        <li>Equipo de Instructores</li>
+                        <li>Ubicacion, instalaciones</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Misión-->
+    <section class="container mt-5 p-3" style="background-color: #F5E98B ; border-radius: 25px;">
+        <div>
+            <p class="fst-italic">color: #F5E98B</p>
+            <div class="text-center">
+                <h1 class="text-center p-1">Misión</h1>
+                <p class="text-center p-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sed officia non libero sunt nesciunt deserunt possimus
+                    fugit illo, provident voluptas accusantium amet quidem aperiam nihil dicta sequi vero laudantium?
+                </p>
+            </div>
+            <p class="text-end fst-italic">color: #F5E98B</p>
+        </div>
+    </section>
+
+    <!--Vision-->
+    <section>
+        <div class="container mt-5 p-3">
+            <div class="text-center">
+                <h1 class="text-center p-1">Visión</h1>
+                <p class="text-center p-2">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa totam sequi, optio quod voluptatum provident commodi
+                    debitis nihil rem animi explicabo corrupti delectus dolores pariatur eligendi laudantium sed deserunt ea?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Valores-->
+    <section class="p-1 mt-5" style="background-color: #FFEE00;">
+        <p class="fst-italic">color: #FFEE00</p>
+        <div class="container text-center">
+            <h1 class="m-2">Nuestros VALORES son:</h1>
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="valor">Valor 1</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="valor">Valor 2</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="valor">Valor 3</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="valor">Valor 4</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="valor">Valor 5</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="valor">Valor 6</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="valor">Valor 7</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="valor">Valor 8</div>
+                </div>
+            </div>
+        </div>
+        <p class="text-end fst-italic">color: #FFEE00</p>
+    </section>
+
+    <!--Aliados Estrategicos-->
+    <section>
+        <div class="container-fluid bg-light py-5 text-center">
+            <h2 class="mb-4">Aliados</h2>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 d-flex justify-content-center align-items-center mt-2 mb-2">
+                    <img src="Img_Fundadores/Logo_CEMEF.png" width="150px" height="150px" alt="Logo del CEMEF">
+                </div>
+                <!-- Logo de CONAPRENDE -->
+                <div class="col-sm-6 col-md-6 d-flex justify-content-center align-items-center mt-2 mb-2">
+                    <img src="Imagenes/Logo_CONAPRENDE.png" width="250px" height="150px" alt="Logo del CONAPRENDE">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certicados -->
+    <section>
+        <a name="Eventos"></a>
+        <div class="container-fluid p-5 mt-5">
+            <h1 class="text-center p-3">Eventos</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, animi quos et ipsa accusamus cupiditate adipisci
+                asperiores culpa assumenda. Rem neque tempora minus! Architecto minus consequatur, iusto quasi molestias eveniet?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae laudantium perferendis iure porro a. Excepturi
+                asperiores fugiat repudiandae quasi laudantium minima culpa vero, nam ipsum perspiciatis saepe distinctio quibusdam
+                tenetur.
+            </p>
+            <div class="row g-0">
+                <div class="col-md-5 mt-5 mb-2 text-center">
+                    <h3 class="p-1">Nombre del curso o evento</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vitae eaque porro molestias iste, rem optio
+                        possimus quas? Dignissimos, quaerat. Obcaecati consequuntur perferendis aperiam blanditiis debitis dolores, voluptas
+                        molestiae reprehenderit!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vitae eaque porro molestias iste, rem optio
+                        possimus quas? Dignissimos, quaerat. Obcaecati consequuntur perferendis aperiam blanditiis debitis dolores, voluptas
+                        molestiae reprehenderit!
+                    </p>
+                    <a class="btn-CD" data-bs-toggle="modal" data-bs-target="#exampleModal3">Más información</a>
+                </div>
+                <div class="col-md-7 mb-2 p-4 text-center">
+                    <img src="Flyers/Flyer_Congreso-30sep-01Oct.png" class="img-fluid" alt="Flyer" srcset="" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Carrusel -->
+    <section>
+        <div class="container-sm mt-2">
+            <h1 class="text-center">Certificaciones</h1>
+            <p class="text-center">A continuacion presetamos las certificaciones que ofecemos en este momento, <strong> clic par más información</strong>.</p>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal3"><img src="Z_Imagenes/slider-1.jpg" class="d-block w-100" alt="..." loading="lazy"></a>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="Z_Imagenes/Plantilla_1280x750.png" class="d-block w-100" alt="..." loading="lazy">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cursos & Certificaciones</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Enlaca tus cursos y/o certificaciones</h5>
+                    <ul>
+                        <li>Enlaces para area de ventas via Whatsapp</li>
+                        <li>Enlaces a Formulario (eje: Google Forms, Microsoft Forms)</li>
+                        <li>Enlaces a Paginas extrernas: <a href="https://www.google.com/">Google.com</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container-sm mt-5">
+        <div id="carouselExampleAutoplaying2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <a href="https://www.youtube.com"><img src="Imagenes/pexels-cottonbro-4709285.jpg" class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="Imagenes/Plantilla_1200x1200.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div> -->
+
+    <!-- Contenedor del video -->
+    <section class="mt-5">
+        <h1 class="text-center">Video</h1>
+        <p class="text-center">Videos de Canal de YouTube</p>
+        <div class="container">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/mzDPNi77F24?si=oGMXYoctrhE6q3i-"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!--Tarjetas-->
+    <!-- <div class="container mt-5 d-none d-md-block">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-0">
+                    <img src="Imagenes/card-1.jpg" class="card-img-top rounded-5" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0">
+                    <img src="Imagenes/card-2.jpg" class="card-img-top rounded-5 rounded-top-0" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0">
+                    <img src="Imagenes/card-3.jpg" class="card-img-top rounded-circle" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- tarjetas horinzontales -->
+    <!-- <div class="container mt-5">
+        <div class="card mb-3 border-0">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <img src="Imagenes/card-1.jpg" class="img-fluid rounded-5" alt="...">
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h2 class="card-title">Cursos</h2>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur maxime expedita minima eligendi sapiente repellat magni delectus id voluptatibus recusandae sed, earum ducimus cupiditate error ipsam itaque praesentium possimus vero.</p>
+                        <div class="text-center"><a href="#" class="btn btn-success btn-lg">Da clic aqui</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card mb-3 border-0">
+            <div class="row g-0">
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h2 class="card-title">Cursos</h2>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur maxime expedita minima eligendi sapiente repellat magni delectus id voluptatibus recusandae sed, earum ducimus cupiditate error ipsam itaque praesentium possimus vero.</p>
+                        <div class="text-center"><a href="#" class="btn btn-success btn-lg">Da clic aqui</a></div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <img src="Imagenes/card-1.jpg" class="img-fluid rounded-5" alt="...">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <a name="Ubicacion"></a>
+    <section class="container mt-5 p-3">
+        
+        <div>
+            <div class="text-center">
+                <h1 class="text-center p-1">Ubicación</h1>
+                <p class="text-center p-2">
+                    Av. Chapultepec 363 Col. Roma Norte, 06700 Cuauhtémoc CDMX, Mexico City, Mexico
+                </p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.7614274534803!2d-99.16854202603915!3d19.42271134099902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff37b37ad5f5%3A0x88d43f3ff089389a!2sAv%20Chapultepec%20363%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1727732532910!5m2!1ses-419!2smx"
+                    allowfullscreen="" loading="lazy" width="500" height="450"
+                    style="width: 100%; margin: auto; border: 0;"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    
+
+    <!--Footer-->
+    <footer>
+        <a name="Contacto"></a>
+        <div class="container-fluid p-5 text-center mt-5 footer">
+            <p class="fst-italic">color: #FFEE00</p>
+            <div class="row g-0">
+                <div class="col-md-6 mb-4">
+                    <nav class="nav flex-column">
+                        <a class="nav-link text-dark" href="mailto:nestorzamoraabr11@gmail.com">
+                            <i class="bi bi-envelope"></i> Correo
+                        </a>
+                        <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                            <i class="bi bi-facebook"></i> Facebook
+                        </a>
+                        <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                            <i class="bi bi-instagram"></i> Instagram
+                        </a>
+                        <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                            <i class="bi bi-youtube"></i> YouTube
+                        </a>
+                        <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                            <i class="bi bi-book"></i> Revista Digital
+                        </a>
+                    </nav>
+                </div>
+                <div class="col-md-6">
+                    <img src="Imagenes/Logo_CENAAM.png" width="200" height="230" alt="Logo del CENAAM" srcset="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Red social</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Enlaca tus redes adicionales</h5>
+                    <ul>
+                        <li>Correo</li>
+                        <li>Facebook</li>
+                        <li>Youtube</li>
+                        <li>Revista Digital</li>
+                    </ul>
+                    <li>Orden y elementos a seleccionar</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Script Instalacion de Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
